@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Toni Blair | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #0a0a0a;
+      color: white;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Background Animation */
+    .animated-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .bg-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(90px) contrast(120%) brightness(120%);
+      opacity: 0.35;
+      animation: float 8s ease-in-out infinite;
+      background-blend-mode: screen;
+    }
+
+    .bg-orb-1 {
+      width: 420px; height: 420px;
+      background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+      top: 15%; left: 10%;
+    }
+
+    .bg-orb-2 {
+      width: 320px; height: 320px;
+      background: linear-gradient(45deg, #10b981, #14b8a6);
+      top: 30%; right: 12%;
+      animation-delay: 3s;
+    }
+
+    .bg-orb-3 {
+      width: 280px; height: 280px;
+      background: linear-gradient(45deg, #f59e0b, #ef4444);
+      bottom: 20%; left: 55%;
+      animation-delay: 5s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) translateX(0px); }
+      50% { transform: translateY(-30px) translateX(20px); }
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      backdrop-filter: blur(18px) saturate(180%);
+      background: rgba(25, 25, 25, 0.35);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      z-index: 1000;
+    }
+
+    nav .logo {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #ddd;
+      transition: color 0.3s ease, font-weight 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #03f72c;
+      font-weight: 600;
+    }
+
+    /* Hero */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .hero h2 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-bottom: 25px;
+      color: #b5b5b5;
+    }
+
+    .hero .btns a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 25px;
+      border-radius: 8px;
+      background: #03f72c;
+      color: black;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .hero .btns a:hover {
+      background: #fff;
+      color: black;
+    }
+
+    /* Sections */
+    section {
+      padding: 80px 12%;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      background: rgba(25, 25, 25, 0.7);
+    }
+  </style>
+</head>
+<body>
+  <!-- Animated Background -->
+  <div class="animated-bg">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo"> TB </div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Toni Blair</h1>
+    <h2>Ocean Engineering & Naval Architecture Student | UI/UX Designer | Blockchain Enthusiast</h2>
+    <div class="btns">
+      <a href="mailto:toniblair909@kgpian.iitkgp.ac.in">Student_Email</a>
+      <a href="mailto:toniblair909@gmail.com">Email</a>
+      <a href="https://github.com/toni8283" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/toni-blair-a61b57297" target="_blank">LinkedIn</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>Third-year dual degree student at IIT Kharagpur pursuing BTech + MTech in Ocean Engineering and Naval Architecture. Passionate about combining traditional naval engineering with modern technology through UI/UX design and blockchain development. Experienced in leadership roles with strong diplomatic communication skills and artistic abilities. Currently expanding expertise in smart contract development and security research while maintaining active involvement in campus activities and design initiatives.</p>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <h2>Education</h2>
+    <div class="card">
+      <h3>BTech + MTech in Ocean Engineering and Naval Architecture</h3>
+      <p>Indian Institute of Technology Kharagpur (2023 - 2028) | Current CGPA: 7.1</p>
+    </div>
+    <div class="card">
+      <h3>Class XII (CBSE)</h3>
+      <p>80% | 2023</p>
+    </div>
+    <div class="card">
+      <h3>Class X (ICSE)</h3>
+      <p>84% | 2021</p>
+    </div>
+  </section>
+
+  <!-- Leadership Experience -->
+  <section id="experience">
+    <h2>Leadership Experience</h2>
+    <div class="card">
+      <h3>Sub-Design Head - Samudramanthan Fest, IIT Kharagpur</h3>
+      <p>Leading design initiatives for one of IIT Kharagpur's premier technical festivals, managing creative teams and ensuring visual consistency.</p>
+    </div>
+    <div class="card">
+      <h3>Secretary - Rajendra Prasad Hall of Residence, IIT Kharagpur</h3>
+      <p>Managing hostel affairs, coordinating between residents and administration, conflict resolution, and organizing events.</p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="card">
+      <h3>Programming Languages</h3>
+      <p>C/C++, Java, Python, JavaScript, HTML, CSS, MySQL</p>
+    </div>
+    <div class="card">
+      <h3>Design & Engineering Software</h3>
+      <p>AutoCAD, Revit, CAM_CAD, Adobe XD, Photoshop, Canva, Krita, Figma</p>
+    </div>
+    <div class="card">
+      <h3>Specialized Skills</h3>
+      <p>UI/UX Design, Frontend Development, Smart Contracts, Web3, Blockchain Security</p>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="card">
+      <h3>E-commerce Store Frontend</h3>
+      <p>Developed a responsive e-commerce website frontend with modern UI/UX principles.</p>
+    </div>
+    <div class="card">
+      <h3>Web Calculator Application</h3>
+      <p>Built a fully functional web-based calculator with advanced operations and responsive design.</p>
+    </div>
+    <div class="card">
+      <h3>Web3 Finance Introduction Platform</h3>
+      <p>Created an educational webpage introducing Web3 finance concepts with interactive elements.</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <p>📧 toniblair909@gmail.com</p>
+      <p>📧 toniblair909@kgpian.iitkgp.ac.in</p>
+      <p>📱 +91 9234261447</p>
+      <p>📍 IIT Kharagpur, West Bengal, India</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Toni Blair | Portfolio Website</p>
+  </footer>
+</body>
+</html>
